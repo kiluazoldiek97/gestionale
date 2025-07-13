@@ -1,0 +1,81 @@
++-------------+         +---------------+
+
+|   Database  |         |   CalendarWindow  |
+
++-------------+         +---------------+
+
+| - check_login()        | - master: tk.Tk
+
+| - get_users()          | - db: Database
+
+| - get_tasks()          | - task_id: int
+
+| - check_username()     | - work_hours: int
+
+| - check_task_id()      | - set_date(start_date)
+
+| - get_work_hours()     +---------------+
+
+| - add_comment()
+
+| - set_start_date()
+
+| - set_end_date()
+
++-------------+
+
+ 
+
++-------------+         +---------------+
+
+| LoginWindow |         |   AdminWindow  |
+
++-------------+         +---------------+
+
+| - master: tk.Tk        | - master: tk.Tk
+
+| - db: Database         | - db: Database
+
+| - login()              | - task_id: int
+
+                         | - users: list
+
+|                        | - create_admin_interface()
+
++-------------+         | - open_task_window(user_id, username)
+
+                        | - open_calendar(user_id)
+
+                        | - set_date(start_date)
+
+                        +---------------+
+
+ 
+
++-------------+         +---------------+
+
+|   UserWindow |         |   TaskWindow  |
+
++-------------+         +---------------+
+
+| - master: tk.Tk        | - master: tk.Tk
+
+| - db: Database         | - db: Database
+
+| - task_id: int         | - username: str
+
+| - user_id: int         +---------------+
+
+| - create_login_interface()
+
+| - login()
+
+| - create_user_interface()
+
+| - update_task_listbox()
+
+| - update_task()
+
+| - open_calendar()
+
+| - set_date(selected_date, task_id)
